@@ -415,3 +415,18 @@ class Index extends React.Component {
 }
 
 
+
+
+
+
+
+// heading
+// login form ,registration from, business-bio  page
+// summary:
+// login form has two basic components button and textbox but i use only button as you told to loop the field 
+// registration form get data from state and render the loop of fields
+// business-bio:
+// business-bio page is seprate page having its own html page which render business-bio 
+// business-bio.jsx has its header which we use in our previous site just pass the array of data to header
+// sidebar in business-bio is also a seprate component bcz it will further use in next ui's it gets the array of data and render the side bar throug looping
+// EditDeleteCard is seprate component placed in flavor folder which get data from parnet and render the card 

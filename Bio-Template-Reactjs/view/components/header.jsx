@@ -42,7 +42,7 @@ class Header extends React.Component {
                 </div>
                 <div className="off-canvas-overlay"></div>
 
-                <header className="header-area">
+                <header className="header-area bdr-bottom" data-z-index="5">
                     <div className="container-fluid">
                         <div className="header-flex-wrap">
                             <div className="logo"><a href={logo.link}><img src={logo.path} alt="" /></a></div>
