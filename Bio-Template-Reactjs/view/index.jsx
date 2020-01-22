@@ -419,7 +419,6 @@ class Index extends React.Component {
 
 
 
-
 // heading
 // login form ,registration from, business-bio  page
 // summary:
@@ -430,3 +429,9 @@ class Index extends React.Component {
 // business-bio.jsx has its header which we use in our previous site just pass the array of data to header
 // sidebar in business-bio is also a seprate component bcz it will further use in next ui's it gets the array of data and render the side bar throug looping
 // EditDeleteCard is seprate component placed in flavor folder which get data from parnet and render the card 
+
+
+
+
+
+

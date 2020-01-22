@@ -33,6 +33,8 @@
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+
+    
 </head>
 
 <body>
@@ -49,9 +51,12 @@
     <!-- View scripts -->
     <script type="text/jsx" src="view/bio-business7.jsx"></script>
     <script type="text/jsx" src="view/bio-business8.jsx"></script>
+    <script type="text/jsx" src="view/companyinfo.jsx"></script>
+
     <!-- Main Components -->
     <script type="text/jsx" src="view/components/header.jsx"></script>
     <script type="text/jsx" src="view/components/sidebar.jsx"></script>
+    <script type="text/jsx" src="view/components/formdynamic.jsx"></script>
     <!-- Main Components End -->
 
 
@@ -59,13 +64,17 @@
     <script type="text/jsx" src="view/flavors/editdeletecard.jsx"></script>
     <!-- flavor script End -->
 
+      <!-- basicomponents -->
+    <script type="text/jsx" src="view/basicomponents/textbox.jsx"></script>
+    <script type="text/jsx" src="view/basicomponents/select.jsx"></script>
+    <!-- basicomponents End --
 
     <!-- View scripts End -->
 
     <!--  jsx render -->
     <script type="text/jsx">
         ReactDOM.render(
-        <BioBusiness8 />, document.getElementById("app"));
+        <CompanyInfo />, document.getElementById("app"));
     </script>
 
 
@@ -89,6 +98,10 @@
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
 
+
+
+
+    
 </body>
 
 </html>

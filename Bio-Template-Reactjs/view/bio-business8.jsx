@@ -97,7 +97,6 @@ class BioBusiness8 extends React.Component {
                     }
                 ]
             },
-
             //formData
             data: {
                 form: [
@@ -133,7 +132,7 @@ class BioBusiness8 extends React.Component {
     }
 
     render() {
-        const { headerData, sidebarData ,data} = this.state
+        const { headerData, sidebarData, data } = this.state
         var tempform = []
         var key = 0
         data.form.forEach(item => {
