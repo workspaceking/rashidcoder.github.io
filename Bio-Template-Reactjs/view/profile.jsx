@@ -1,4 +1,4 @@
-class BioBusiness8 extends React.Component {
+class Profile extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -99,30 +99,56 @@ class BioBusiness8 extends React.Component {
             },
             //formData
             data: {
+                action: "/users",
+                method: "POST",
                 form: [
                     {
-                        label: "FirstName",
+                        fieldtype: "input",
+                        col: "col",
+                        label: "First NAME",
                         type: "text",
                         placeholder: "",
                         className: "xyz"
                     },
                     {
-                        label: "LastName",
+                        fieldtype: "input",
+                        col: "col",
+                        label: "Last Name",
+                        type: "text",
+                        placeholder: "",
+                        className: "xyz"
+
+                    },
+                    {
+                        fieldtype: "input",
+                        col: "col",
+                        label: "Phone Number",
                         type: "text",
                         placeholder: "",
                         className: "xyz"
                     },
                     {
-                        label: "Phone No",
-                        type: "text",
-                        placeholder: "",
-                        className: "xyz"
-                    },
-                    {
+                        fieldtype: "input",
+                        col: "col",
                         label: "Email",
                         type: "email",
                         placeholder: "",
                         className: "xyz"
+                    },
+                    {
+                        fieldtype: "input",
+                        col: "col",
+                        label: "Profile Picture",
+                        type: "file",
+                        placeholder: "",
+                        className: "xyz"
+                    },
+                    {
+                        fieldtype: "button",
+                        col: "col-lg-6",
+                        type: "submit",
+                        label: "Save",
+                        className: "round-btn",
                     }
 
                 ]
@@ -133,17 +159,6 @@ class BioBusiness8 extends React.Component {
 
     render() {
         const { headerData, sidebarData, data } = this.state
-        var tempform = []
-        var key = 0
-        data.form.forEach(item => {
-            tempform.push(
-                <div class="input-inside type-2">
-                    <label for="">{item.label}</label>
-                    <input type={item.type} placeholder={item.placeholder} class={item.class} />
-                </div>
-            )
-        });
-
 
         return (
             <div>
@@ -153,7 +168,6 @@ class BioBusiness8 extends React.Component {
                     <div class="main-full">
                         {/* Sidebar */}
                         <SideBar data={sidebarData} />
-
                         <div class="mainContent-wrap">
                             <p class="pagi-nation">My account > my informations</p>
                             <div class="content-heading">
@@ -161,25 +175,9 @@ class BioBusiness8 extends React.Component {
                             </div>
 
                             <div class="main-content">
-                                <form action="#">
-                                    {tempform}
-                                    <div class="input-inside type-2">
-                                        <label for="">PROFILE PICTURE</label>
-                                        <div class="uploaded-photo">
-                                            {/* <img src="assets/img/user-2.png" alt="" />
-                                            <a href="#">Upload a new picture</a> */}
-                                            <input type="file" className="fileupload" />
-                                        </div>
-                                    </div>
-                                    <div class="submit-btn business-pge">
-                                        <button class="round-btn" type="submit">SAVE</button>
-                                    </div>
-                                </form>
+                                <FormDynamic data={data} />
                             </div>
                         </div>
-
-
-
                     </div>
                 </main>
             </div>

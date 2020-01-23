@@ -1,4 +1,4 @@
-class CompanyInfo extends React.Component {
+class AddProduct extends React.Component {
     constructor(props) {
         super(props)
 
@@ -106,65 +106,52 @@ class CompanyInfo extends React.Component {
                 form: [
                     {
                         fieldtype: "input",
-                        col: "col",
-                        
-                        label: "COMPANY NAME",
+                        col: "col-lg-6 ",
+                        label: "PRODUCT TITLE",
                         type: "text",
                         placeholder: "",
                         className: "xyz"
                     },
+                    {isNewLine:true},
                     {
-                        fieldtype: "input",
-                        col: "col",
-                        label: "INCORPORATION NUMBER",
-                        type: "text",
-                        placeholder: "",
-                        className: "xyz"
-
-                    },
-                    {
-                        fieldtype: "input",
-                        col: "col",
-                        label: "COMPANY ADDRESS",
-                        type: "text",
-                        placeholder: "",
-                        className: "xyz"
-                    },
-                    {
-                        fieldtype: "input",
-                        col: "col",
-                        label: "TAX NUMBER",
-                        type: "text",
-                        placeholder: "",
-                        className: "xyz"
-                    },
-                    {
-                        fieldtype: "select",
-                        col: "col",
-                        label: "COMPANY SIZE",
+                        fieldtype: "textarea",
+                        col: "col-lg-6",
+                        label: "PRODUCT DESCRIPTION",
                         className: "xyz",
-                        option: [
-                            {
-                                value: '1',
-                                text: "20-50 employees"
-                            },
-                            {
-                                value: '2',
-                                text: "20-50 employees"
-                            }
-                        ]
+                        name: "productdescription",
+                        cols: "30",
+                        rows: 10
                     },
                     {
-                        fieldtype: "input",
-                        col: "col",
-                        label: "Banner",
-                        type: "file",
-                        placeholder: "",
-                        className: "xyz"
+                        fieldtype: "textarea",
+                        col: "col-lg-6",
+                        label: "IGREDIENTS",
+                        className: "xyz",
+                        name: "ingredients",
+                        cols: "30",
+                        rows: 10
+                    },
+                    {
+                        fieldtype: "textarea",
+                        col: "col-lg-6",
+                        label: "PRESERVATION",
+                        className: "xyz",
+                        name: "preservation",
+                        cols: "30",
+                        rows: 10
+                    },
+                    {
+                        fieldtype: "textarea",
+                        col: "col-lg-6",
+                        label: "PACKAGING",
+                        className: "xyz",
+                        name: "packaging",
+                        cols: "30",
+                        rows: 10
                     },
                     {
                         fieldtype: "select",
-                        col: "col",
+                        col: "col-lg-6",
                         label: "CATEGORIE(S)",
                         className: "xyz",
                         option: [
@@ -183,18 +170,8 @@ class CompanyInfo extends React.Component {
                         ]
                     },
                     {
-                        fieldtype: "textarea",
-                        col: "col",
-                        label: "COMPANY PRESENTATION",
-                        className: "xyz",
-                        name: "companyPresentation",
-                        cols: "30",
-                        rows: 10
-                    },
-
-                    {
                         fieldtype: "select",
-                        col: "col",
+                        col: "col-lg-6",
                         label: "Certification(s)",
                         className: "xyz",
                         option: [
@@ -213,8 +190,17 @@ class CompanyInfo extends React.Component {
                         ]
                     },
                     {
+                        fieldtype: "input",
+                        col: "col-lg-6",
+                        label: "upload imgae",
+                        type: "file",
+                        placeholder: "",
+                        className: "xyz"
+                    },
+                    {isNewLine:true},
+                    {
                         fieldtype: "button",
-                        col: "col",
+                        col: "col-lg-3",
                         type: "submit",
                         label: "Save",
                         className: "round-btn",
@@ -240,21 +226,21 @@ class CompanyInfo extends React.Component {
 
                         <div className="mainContent-wrap">
 
-                            <p className="pagi-nation">My account > my supplier informations</p>
+                            <p className="pagi-nation">My account > my catalog > add a product</p>
+                            <div class="write-lan col-3 offset-lg-9">
+                                <a href="#" class="active">French</a>
+                                <a href="#">English</a>
+                                <a href="#">Spanish</a>
+                            </div>
                             <div className="content-heading">
-                                <h2>My company informations</h2>
+                                <h2>Add a product</h2>
                             </div>
 
-                            <div className="main-content">
+                            <div className="main-content full">
                                 {/* form */}
-
                                 <FormDynamic data={data} />
-                                
-
                             </div>
                         </div>
-
-
 
                     </div>
                 </main>

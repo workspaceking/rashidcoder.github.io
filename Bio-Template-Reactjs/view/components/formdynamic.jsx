@@ -18,47 +18,48 @@ class FormDynamic extends React.Component {
             if (item.fieldtype == "input") {
                 key++
                 tempform.push(
-                    <div style={style} key={key++} className="input-inside type-2">
+
+                    <span style={style} className={'input-inside type-2 ' + item.col}>
                         <label >{item.label}</label>
                         <input type={item.type} className={item.className} placeholder={item.placeholder} />
-                    </div>
+                    </span>
                 )
 
             }
             else if (item.fieldtype == "select") {
                 key++
                 tempform.push(
-                    <div style={style} key={key++} className="input-inside type-2 with-select">
+                    <span style={style} key={key++} className={'input-inside type-2 with-select ' + item.col}>
                         <label >{item.label}</label>
                         <select className={item.className} name="" id="">
                             {item.option.map(option =>
                                 <option key={key++} value={option.value}>{option.text}</option>
                             )}
                         </select>
-                    </div>
+                    </span>
                 )
             }
             else if (item.fieldtype == "textarea") {
                 key++
                 tempform.push(
-                    <div style={style} key={key++} className="input-inside type-2">
+                    <span style={style} key={key++} className={'input-inside type-2 ' + item.col} >
                         <label >{item.label}</label>
                         <textarea name={item.name} className={item.className} id="" cols={item.cols} rows={item.rows}></textarea>
-                    </div>
+                    </span>
                 )
             }
             else if (item.fieldtype == "button") {
                 key++
                 tempform.push(
-                    <div style={style} key={key++} className="submit-btn business-pge">
+                    <span style={style} key={key++} className={'submit-btn business-pge ' + item.col}>
                         <button className={item.className} type={item.type}>{item.label}</button>
-                    </div>
+                    </span>
                 )
             }
-            else {
-                <div>
-
-                </div>
+            else if (item.isNewLine == true) {
+                tempform.push(
+                    <br /> 
+                )
             }
         });
 
@@ -66,6 +67,7 @@ class FormDynamic extends React.Component {
 
             <form action={data.action} method={data.method}>
                 {tempform}
+                
             </form>
         )
     }

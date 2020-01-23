@@ -23,6 +23,7 @@ class Form extends React.Component {
                                 <a href="#" className="text-uppercase">RECHERCHER UN PRODUIT OU UN FOURNISSEUR</a>
                                 <a href="#">Recherche approfondie</a>
                             </div>
+                            
                             <div className="research-g-wrap">
                                 <div className="research-item">
                                     <div className="input-inside">

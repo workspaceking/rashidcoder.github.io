@@ -1,4 +1,4 @@
-class BioBusiness7 extends React.Component {
+class MyCatalog extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
