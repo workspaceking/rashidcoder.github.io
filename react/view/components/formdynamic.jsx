@@ -51,7 +51,7 @@ class FormDynamic extends React.Component {
             else if (item.fieldtype == "button") {
                 key++
                 tempform.push(
-                    <span style={style} key={key++} className={'submit-btn business-pge ' + item.col}>
+                    <span style={style} key={key++} className={'submit-btn  ' + item.col}>
                         <button className={item.className} type={item.type}>{item.label}</button>
                     </span>
                 )

@@ -54,11 +54,11 @@ class Login extends React.Component {
                         <a href="#"><img src="assets/img/login-logo.svg" alt="" /></a>
                         <p>Login</p>
                     </div>
-                    <div action="#">
+                    <div >
                         <div className="form-content">
                         <FormDynamic data={data} />
                             <div className="forget-wrap">
-                                <a href="#">Registration</a>
+                                <a href="http://localhost:3000/login.html/registration">Registration</a>
                             </div>
                         </div>
                     </div>
