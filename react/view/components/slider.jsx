@@ -15,8 +15,8 @@ class Slider extends React.Component {
             speed: 300,
             slidesToShow: 2,
             slidesToScroll: 1,
-            prevArrow: '<button type="button" class="slick-prev"><i class="fal fa-long-arrow-right"></i></button>',
-            nextArrow: '<button type="button" class="slick-next"><i class="fal fa-long-arrow-left"></i></button>',
+            prevArrow: '<button type="button" className="slick-prev"><i className="fal fa-long-arrow-right"></i></button>',
+            nextArrow: '<button type="button" className="slick-next"><i className="fal fa-long-arrow-left"></i></button>',
         
             responsive: [
                 {

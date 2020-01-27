@@ -39,19 +39,19 @@
     <div id="app"></div>
 
     <!-- react | react dom & bable -->
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="/assets/react/react.development.js"></script>
+    <script crossorigin src="/assets/react/react-dom.development.js"></script>
+    <script crossorigin src="/assets/react/babel.min.js"></script>
 
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.1.2/react-router-dom.js"></script>
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.1.2/react-router-dom.min.js"></script>
+    <!-- <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.1.2/react-router-dom.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.1.2/react-router-dom.min.js"></script> -->
 
     <!-- react | react dom & babel end -->
 
 
     <!-- View scripts -->
-    <script type="text/jsx" src="view/login.jsx"></script>
-    <script type="text/jsx" src="view/registration.jsx"></script>
+    <script type="text/jsx" src="view/pages/login.jsx"></script>
+    <script type="text/jsx" src="view/pages/registration.jsx"></script>
 
     <!-- Main Components -->
     <script type="text/jsx" src="view/components/header.jsx"></script>
@@ -71,7 +71,7 @@
     <!--  jsx render -->
     <script type="text/jsx">
         ReactDOM.render(
-        <Login/>, document.getElementById("app"));
+        <Registration/>, document.getElementById("app"));
     </script>
 
 

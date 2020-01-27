@@ -40,7 +40,7 @@ class FormDynamic extends React.Component {
                     break;
                 case type.Select: 
                     form_dom.push(
-                        <span style={style} key={key++} className={`input-inside type-2 with-select ${item.col}` }>
+                        <span style={style.input_inside} key={key++} className={`input-inside type-2 with-select ${item.col}` }>
                             <label >{item.label}</label>
                             <select className={item.className} name="" id="">
                                 {item.option.map(option =>
@@ -52,18 +52,22 @@ class FormDynamic extends React.Component {
                     break;
                 case type.TextArea: 
                     form_dom.push(
-                        <span style={style} key={key++} className={`input-inside type-2  ${item.col}`} >
+                        <span style={style.input_inside} key={key++} className={`input-inside type-2  ${item.col}`} >
                             <label >{item.label}</label>
-                            <textarea name={item.name} className={item.className} id="" cols={item.cols} rows={item.rows}></textarea>
+                            <textarea name={item.name} className={item.className} id="" placeholder={item.placeholder} cols={item.cols} rows={item.rows}></textarea>
                         </span>
                     )
                     break;
                 case type.Button: 
                     form_dom.push(
-                        <span style={style} key={key++} className={`submit-btn ${item.col}`}>
+                        <span style={style.input_inside} key={key++} className={`submit-btn ${item.col}`}>
                             <button className={item.className} type={item.type}>{item.label}</button>
                         </span>
                     )
+                    case type.isNewLine:
+                        form_dom.push(
+                            <br key={key++} />
+                        )
                     break;
                 default: 
                     break;
@@ -73,7 +77,9 @@ class FormDynamic extends React.Component {
 
         return (
             <form key={key++} action={data.action} method={data.method}>
+                <span className={data.className}>
                 {form_dom}
+                </span>
             </form>
         )
     }

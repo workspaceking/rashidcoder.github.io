@@ -1,0 +1,1 @@
+php -S localhost:1000 && start chrome localhost:1000   

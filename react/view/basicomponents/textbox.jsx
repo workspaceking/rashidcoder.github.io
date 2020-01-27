@@ -9,7 +9,7 @@ class TextBox extends React.Component {
 
     render() {
         return (
-            <div class="input-inside type-2">
+            <div className="input-inside type-2">
                 <label for="">{this.props.label}</label>
                 <input {...this.props}  />
             </div>
