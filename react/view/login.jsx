@@ -43,12 +43,14 @@ class Login extends React.Component {
         const { data } = this.state
 
         const style = {
-            backgroundImage: "url(assets/img/login-bg.jpg)"
+            wrapper: {
+                backgroundImage: "url(assets/img/login-bg.jpg)"
+            }
         }
         
 
         return (
-            <div className="login-wrapper" style={style} >
+            <div className="login-wrapper" style={style.wrapper} >
                 <div className="login-inner-wrap type-2">
                     <div className="logo-part type-2">
                         <a href="#"><img src="assets/img/login-logo.svg" alt="" /></a>

@@ -1,73 +1,79 @@
 class FormDynamic extends React.Component {
     constructor(props) {
-        super(props)
-
-        this.state = {
-            data: this.props.data
+        super(props) 
+        this.state = { 
+        }
+        
+        this.FormType={
+            Input: "input",
+            Select:"select",
+            TextArea:"textarea",
+            Button:"button",
         }
     }
 
+ 
+
     render() {
-        const { data } = this.state
+        // props are not state they are separate thing; kindly keep them separate don't assign props to state
+        // there will a single case in 100 for doing this
+        const  data  = this.props.data
+        const type = this.FormType;
         var style = {
-            padding: "10px"
+            // in general cases use like this, but for specifi element specify elements 
+            // padding: "10px",
+            // like this e.g
+            input_inside: {
+                padding: "10px"
+            }
+
         }
-        var tempform = []
+        var form_dom = []
         var key = 0
         data.form.forEach(item => {
-            if (item.fieldtype == "input") {
-                key++
-                tempform.push(
-
-                    <span style={style} className={'input-inside type-2 ' + item.col}>
-                        <label >{item.label}</label>
-                        <input type={item.type} className={item.className} placeholder={item.placeholder} />
-                    </span>
-                )
-
+            switch(item.fieldtype) {
+                case type.Input: 
+                    form_dom.push(<span style={style.input_inside}  key={key++}  className={`input-inside type-2  ${item.col}`}>
+                                <label >{item.label}</label>
+                                <input type={item.type} className={item.className} placeholder={item.placeholder} />
+                            </span>)
+                    break;
+                case type.Select: 
+                    form_dom.push(
+                        <span style={style} key={key++} className={`input-inside type-2 with-select ${item.col}` }>
+                            <label >{item.label}</label>
+                            <select className={item.className} name="" id="">
+                                {item.option.map(option =>
+                                    <option key={key++} value={option.value}>{option.text}</option>
+                                )}
+                            </select>
+                        </span>
+                    )
+                    break;
+                case type.TextArea: 
+                    form_dom.push(
+                        <span style={style} key={key++} className={`input-inside type-2  ${item.col}`} >
+                            <label >{item.label}</label>
+                            <textarea name={item.name} className={item.className} id="" cols={item.cols} rows={item.rows}></textarea>
+                        </span>
+                    )
+                    break;
+                case type.Button: 
+                    form_dom.push(
+                        <span style={style} key={key++} className={`submit-btn ${item.col}`}>
+                            <button className={item.className} type={item.type}>{item.label}</button>
+                        </span>
+                    )
+                    break;
+                default: 
+                    break;
             }
-            else if (item.fieldtype == "select") {
-                key++
-                tempform.push(
-                    <span style={style} key={key++} className={'input-inside type-2 with-select ' + item.col}>
-                        <label >{item.label}</label>
-                        <select className={item.className} name="" id="">
-                            {item.option.map(option =>
-                                <option key={key++} value={option.value}>{option.text}</option>
-                            )}
-                        </select>
-                    </span>
-                )
-            }
-            else if (item.fieldtype == "textarea") {
-                key++
-                tempform.push(
-                    <span style={style} key={key++} className={'input-inside type-2 ' + item.col} >
-                        <label >{item.label}</label>
-                        <textarea name={item.name} className={item.className} id="" cols={item.cols} rows={item.rows}></textarea>
-                    </span>
-                )
-            }
-            else if (item.fieldtype == "button") {
-                key++
-                tempform.push(
-                    <span style={style} key={key++} className={'submit-btn  ' + item.col}>
-                        <button className={item.className} type={item.type}>{item.label}</button>
-                    </span>
-                )
-            }
-            else if (item.isNewLine == true) {
-                tempform.push(
-                    <br /> 
-                )
-            }
+ 
         });
 
         return (
-
-            <form action={data.action} method={data.method}>
-                {tempform}
-                
+            <form key={key++} action={data.action} method={data.method}>
+                {form_dom}
             </form>
         )
     }
@@ -102,15 +108,15 @@ class FormDynamic extends React.Component {
 //             className: "xyz",
 //             option: [
 //                 {
-//                     value: '1',
+//                     value: `1`,
 //                     text: "Add a category"
 //                 },
 //                 {
-//                     value: '2',
+//                     value: `2`,
 //                     text: "Add a category"
 //                 },
 //                 {
-//                     value: '3',
+//                     value: `3`,
 //                     text: "Add a category"
 //                 }
 //             ]

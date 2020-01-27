@@ -117,18 +117,18 @@ class Registration extends React.Component {
                         <a href="#"><img src="assets/img/login-logo.svg" alt="" /></a>
                         <h5>REGISTRATION</h5>
                     </div>
-                    <div class="tabContainer">
+                    <div className="tabContainer">
                         <nav>
-                            <div class="nav nav-link-wrap" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="tbOne-tab" data-toggle="tab" href="#tbOne" role="tab"
+                            <div className="nav nav-link-wrap" id="nav-tab" role="tablist">
+                                <a className="nav-item nav-link active" id="tbOne-tab" data-toggle="tab" href="#tbOne" role="tab"
                                     aria-controls="nav-home" aria-selected="true">STEP 1</a>
-                                <a class="nav-item nav-link" id="tbTwo-tab" data-toggle="tab" href="#tbTwo" role="tab"
+                                <a className="nav-item nav-link" id="tbTwo-tab" data-toggle="tab" href="#tbTwo" role="tab"
                                     aria-controls="nav-profile" aria-selected="false">STEP 2</a>
                             </div>
                         </nav>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="tbOne" role="tabpanel" aria-labelledby="tbOne-tab">
-                                <div class="tb-content-wrap">
+                        <div className="tab-content" id="nav-tabContent">
+                            <div className="tab-pane fade show active" id="tbOne" role="tabpanel" aria-labelledby="tbOne-tab">
+                                <div className="tb-content-wrap">
 
                                     <FormDynamic data={data} />
 
@@ -139,8 +139,8 @@ class Registration extends React.Component {
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="tbTwo" role="tabpanel" aria-labelledby="tbTwo-tab">
-                                <div class="tb-content-wrap">
+                            <div className="tab-pane fade" id="tbTwo" role="tabpanel" aria-labelledby="tbTwo-tab">
+                                <div className="tb-content-wrap">
                                 <FormDynamic data={data2} />
                                 </div>
                             </div>
