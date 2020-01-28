@@ -1,23 +1,23 @@
 class FormDynamic extends React.Component {
     constructor(props) {
-        super(props) 
-        this.state = { 
+        super(props)
+        this.state = {
         }
-        
-        this.FormType={
+
+        this.FormType = {
             Input: "input",
-            Select:"select",
-            TextArea:"textarea",
-            Button:"button",
+            Select: "select",
+            TextArea: "textarea",
+            Button: "button",
         }
     }
 
- 
+
 
     render() {
         // props are not state they are separate thing; kindly keep them separate don't assign props to state
         // there will a single case in 100 for doing this
-        const  data  = this.props.data
+        const data = this.props.data
         const type = this.FormType;
         var style = {
             // in general cases use like this, but for specifi element specify elements 
@@ -31,16 +31,16 @@ class FormDynamic extends React.Component {
         var form_dom = []
         var key = 0
         data.form.forEach(item => {
-            switch(item.fieldtype) {
-                case type.Input: 
-                    form_dom.push(<span style={style.input_inside}  key={key++}  className={`input-inside type-2  ${item.col}`}>
-                                <label >{item.label}</label>
-                                <input type={item.type} className={item.className} placeholder={item.placeholder} />
-                            </span>)
+            switch (item.fieldtype) {
+                case type.Input:
+                    form_dom.push(<span style={style.input_inside} key={key++} className={`input-inside type-2  ${item.col}`}>
+                        <label >{item.label}</label>
+                        <input type={item.type} className={item.className} placeholder={item.placeholder} />
+                    </span>)
                     break;
-                case type.Select: 
+                case type.Select:
                     form_dom.push(
-                        <span style={style.input_inside} key={key++} className={`input-inside type-2 with-select ${item.col}` }>
+                        <span style={style.input_inside} key={key++} className={`input-inside type-2 with-select ${item.col}`}>
                             <label >{item.label}</label>
                             <select className={item.className} name="" id="">
                                 {item.option.map(option =>
@@ -50,7 +50,7 @@ class FormDynamic extends React.Component {
                         </span>
                     )
                     break;
-                case type.TextArea: 
+                case type.TextArea:
                     form_dom.push(
                         <span style={style.input_inside} key={key++} className={`input-inside type-2  ${item.col}`} >
                             <label >{item.label}</label>
@@ -58,27 +58,31 @@ class FormDynamic extends React.Component {
                         </span>
                     )
                     break;
-                case type.Button: 
+                case type.Button:
                     form_dom.push(
                         <span style={style.input_inside} key={key++} className={`submit-btn ${item.col}`}>
-                            <button className={item.className} type={item.type}>{item.label}</button>
+                            <button className={item.className} type={item.type}>
+                                <Link className="defaultcolor" to={item.route} >
+                                    <li >{item.label}</li>
+                                </Link>
+                            </button>
                         </span>
                     )
-                    case type.isNewLine:
-                        form_dom.push(
-                            <br key={key++} />
-                        )
+                case type.isNewLine:
+                    form_dom.push(
+                        <br key={key++} />
+                    )
                     break;
-                default: 
+                default:
                     break;
             }
- 
+
         });
 
         return (
             <form key={key++} action={data.action} method={data.method}>
                 <span className={data.className}>
-                {form_dom}
+                    {form_dom}
                 </span>
             </form>
         )

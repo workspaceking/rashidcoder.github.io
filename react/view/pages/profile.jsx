@@ -6,21 +6,21 @@ class Profile extends React.Component {
             headerData: {
                 headerMenu: [
                     {
-                        link: "#",
-                        text: "Accueil"
+                        link: "/mycatalog",
+                        text: "My Catalog"
                     },
                     {
-                        link: "#",
-                        text: "Suppier"
+                        link: "/profile",
+                        text: "Profile"
                     },
                     {
-                        link: "#",
-                        text: "Buyer"
+                        link: "/companyinfo",
+                        text: "Company Info"
                     },
 
                     {
-                        link: "#",
-                        text: "FAQ"
+                        link: "/addproduct",
+                        text: "Add Product"
                     },
 
                     {
@@ -66,32 +66,27 @@ class Profile extends React.Component {
                         text: "Messages"
                     },
                     {
-                        link: "#",
-                        image: "assets/img/ic-2.png",
-                        text: "My supplier infos"
+                        link: "/companyinfo",
+                        image: "assets/img/ic-4.png",
+                        text: "Company Info"
                     },
                     {
-                        link: "#",
+                        link: "/mycatalog",
                         image: "assets/img/ic-3.png",
-                        text: "My catalog"
+                        text: "My Catalog"
                     },
                     {
-                        link: "#",
+                        link: "/profile",
                         image: "assets/img/ic-4.png",
                         text: "My infos"
                     },
                     {
-                        link: "#",
+                        link: "/addproduct",
                         image: "assets/img/ic-5.png",
-                        text: "Membership"
+                        text: "Add Product"
                     },
                     {
-                        link: "#",
-                        image: "assets/img/ic-6.png",
-                        text: "Invoices"
-                    },
-                    {
-                        link: "#",
+                        link: "/login",
                         image: "assets/img/ic-7.png",
                         text: "Disconnect me"
                     }
@@ -99,7 +94,7 @@ class Profile extends React.Component {
             },
             //formData
             data: {
-                action: "/users",
+                action: "/profile",
                 method: "POST",
                 form: [
                     {

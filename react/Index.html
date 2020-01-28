@@ -43,13 +43,69 @@
     <script crossorigin src="/assets/react/react.development.js"></script>
     <script crossorigin src="/assets/react/react-dom.development.js"></script>
     <script crossorigin src="/assets/react/babel.min.js"></script>
+
+    <!-- router scripts -->
+
+    <script crossorigin src="./assets/react/react-router-dom.min.js"></script>
+    <script crossorigin src="./assets/react/react-router.min.js"></script>
+
     <!-- react | react dom & babel end -->
 
 
 
+
+
+    <!-- LOGIN View scripts -->
+
+    <script type="text/jsx" src="view/pages/login.jsx"></script>
+    <script type="text/jsx" src="view/pages/registration.jsx"></script>
+
+    <!-- Main Components -->
+    <script type="text/jsx" src="view/components/header.jsx"></script>
+    <script type="text/jsx" src="view/components/formdynamic.jsx"></script>
+
+    <!-- Main Components End -->
+
+    <!-- LOGIN View scripts -->
+
+
+
+
+
+
+
+
+
+    <!-- Pages view Scripts -->
+
+    <!-- View scripts -->
+    <script type="text/jsx" src="view/pages/mycatalog.jsx"></script>
+    <script type="text/jsx" src="view/pages/profile.jsx"></script>
+    <script type="text/jsx" src="view/pages/companyinfo.jsx"></script>
+    <script type="text/jsx" src="view/pages/addproduct.jsx"></script>
+
+    <!-- Main Components -->
+    <script type="text/jsx" src="view/components/header.jsx"></script>
+    <script type="text/jsx" src="view/components/sidebar.jsx"></script>
+    <script type="text/jsx" src="view/components/formdynamic.jsx"></script>
+    <!-- Main Components End -->
+
+
+    <!-- flavor script -->
+    <script type="text/jsx" src="view/flavors/editdeletecard.jsx"></script>
+    <!-- flavor script End -->
+    <!-- Pages view Scripts -->
+
+
+
+
+
+
+    <!-- Index view Script -->
+
+
     <!-- View scripts -->
     <script type="text/jsx" src="view/pages/index.jsx"></script>
-    
 
     <!-- Main Components -->
     <script type="text/jsx" src="view/components/header.jsx"></script>
@@ -62,22 +118,32 @@
     <script type="text/jsx" src="view/components/slider.jsx"></script>
     <script type="text/jsx" src="view/components/footer.jsx"></script>
     <script type="text/jsx" src="view/components/formdynamic.jsx"></script>
-
-    
-    
     <!-- Main Components End -->
+    <!-- View scripts End -->
 
-
-
-
-<!-- View scripts End -->
-    
-    <!--  jsx render -->
-    <script type="text/jsx">
-        ReactDOM.render(
-        <Index/>, document.getElementById("app"));
     </script>
 
+    <script type="text/babel">
+
+        const Router = ReactRouterDOM.BrowserRouter;
+        const Route = ReactRouterDOM.Route;
+        const Link = ReactRouterDOM.Link;
+        const Prompt = ReactRouterDOM.Prompt;
+        const Switch = ReactRouterDOM.Switch;
+        const Redirect = ReactRouterDOM.Redirect;
+        
+        ReactDOM.render(
+            <Router>
+                <Route path="/index" component={Index} />
+                <Route path="/login" component={Login} />
+                <Route path="/registration" component={Registration} />
+                <Route path="/addproduct" component={AddProduct} />
+                <Route path="/mycatalog" component={MyCatalog} />
+                <Route path="/companyinfo" component={CompanyInfo} />
+                <Route path="/profile" component={Profile} />
+            </Router>
+            , document.getElementById("app"));
+    </script>
 
     <!-- jsx render end -->
 
@@ -94,7 +160,7 @@
     <!--====== Plugins js ======-->
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    
+
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>

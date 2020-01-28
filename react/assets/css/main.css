@@ -526,6 +526,7 @@ div[data-relative="yes"] {
   .round-btn:hover {
 	background: #3453A3;
 	color: #fff;
+
   }
   .product-area {
 	padding: 90px 0;
@@ -1118,3 +1119,13 @@ div[data-relative="yes"] {
 .product-slider .slick-slide {
 	margin: 10px;
 }
+
+/*  link button for routing custom css  */
+.defaultcolor{
+	color: #fff;
+    list-style: none;
+}
+.defaultcolor:hover {
+	color: #fff;
+	
+  }

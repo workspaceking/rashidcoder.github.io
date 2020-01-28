@@ -5,7 +5,7 @@ class Registration extends React.Component {
 
             data: {
                 form: [
-                    {isNewLine:true},
+                    { isNewLine: true },
                     {
                         fieldtype: "input",
                         col: "col-lg-6",
@@ -53,48 +53,49 @@ class Registration extends React.Component {
 
                 ]
             },
-            data2:{
-                action: "",
+            data2: {
+                action: "/login",
                 method: "POST",
-                form:[
-                {
-                    fieldtype: "input",
-                    col: "col-lg-6",
-                    label: "Password",
-                    type: "password",
-                    placeholder: "",
-                    className: "xyz"
+                form: [
+                    {
+                        fieldtype: "input",
+                        col: "col-lg-6",
+                        label: "Password",
+                        type: "password",
+                        placeholder: "",
+                        className: "xyz"
 
-                },
-                {
-                    fieldtype: "input",
-                    col: "col-lg-6",
-                    label: "Company Name",
-                    type: "text",
-                    placeholder: "",
-                    className: "xyz"
+                    },
+                    {
+                        fieldtype: "input",
+                        col: "col-lg-6",
+                        label: "Company Name",
+                        type: "text",
+                        placeholder: "",
+                        className: "xyz"
 
-                },
-                {
-                    fieldtype: "input",
-                    col: "col",
-                    label: "Company Address",
-                    className: "xyz",
-                    name: "companyAddress",
-                    type: "text",
-                    placeholder: "",
-                    
+                    },
+                    {
+                        fieldtype: "input",
+                        col: "col",
+                        label: "Company Address",
+                        className: "xyz",
+                        name: "companyAddress",
+                        type: "text",
+                        placeholder: "",
 
-                },
-                {
-                    fieldtype: "button",
-                    col: "col",
-                    type: "submit",
-                    label: "next",
-                    className: "round-btn ",
-                }
-            ]
-        }
+
+                    },
+                    {
+                        fieldtype: "button",
+                        col: "col",
+                        type: "submit",
+                        label: "next",
+                        className: "round-btn ",
+                        route:"/login"
+                    }
+                ]
+            }
 
 
 
@@ -103,7 +104,7 @@ class Registration extends React.Component {
     }
 
     render() {
-        const { data,data2 } = this.state
+        const { data, data2 } = this.state
 
         const backgroundImage = {
             backgroundImage: "url(assets/img/login-bg.jpg)"
@@ -133,15 +134,18 @@ class Registration extends React.Component {
                                     <FormDynamic data={data} />
 
                                     <div className="forget-wrap">
-                                        <a href="http://localhost:3000/login.html">For Login Click here </a>
+                                        <Link className="defaultcolor" to={"/login"} >
+                                            <li>For Login</li>
+                                        </Link>
                                     </div>
+
 
                                 </div>
                             </div>
 
                             <div className="tab-pane fade" id="tbTwo" role="tabpanel" aria-labelledby="tbTwo-tab">
                                 <div className="tb-content-wrap">
-                                <FormDynamic data={data2} />
+                                    <FormDynamic data={data2} />
                                 </div>
                             </div>
                         </div>

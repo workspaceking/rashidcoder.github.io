@@ -3,9 +3,9 @@ class Login extends React.Component {
         super(props)
 
         this.state = {
-            
+
             data: {
-                action: "/users",
+                action: "/profile",
                 method: "POST",
                 form: [
                     {
@@ -31,6 +31,7 @@ class Login extends React.Component {
                         type: "submit",
                         label: "Save",
                         className: "round-btn",
+                        route: "/profile"
                     }
 
                 ]
@@ -47,7 +48,7 @@ class Login extends React.Component {
                 backgroundImage: "url(assets/img/login-bg.jpg)"
             }
         }
-        
+
 
         return (
             <div className="login-wrapper" style={style.wrapper} >
@@ -58,11 +59,22 @@ class Login extends React.Component {
                     </div>
                     <div >
                         <div className="form-content">
-                        <FormDynamic data={data} />
+                            <FormDynamic data={data} />
                             <div className="forget-wrap">
-                                <a href="http://localhost:3000/login.html/registration">Registration</a>
+                                <Link className="defaultcolor" to={"/index"} >
+                                    <li>Back</li>
+                                </Link>
+                                
+                                <Link className="defaultcolor" to={"/registration"} >
+                                    <li>For Registration</li>
+                                </Link>
+
                             </div>
+
                         </div>
+
+
+
                     </div>
                 </div>
             </div>

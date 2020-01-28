@@ -9,18 +9,25 @@ class SideBar extends React.Component {
         super(props)
 
         this.state = {
-            sidebarData:this.props.data.sidebar
+            sidebarData: this.props.data.sidebar
 
         }
     }
 
     render() {
-        const {sidebarData} = this.state
-        var tempsidebar=[]
-        var key=0
+        const { sidebarData } = this.state
+        var tempsidebar = []
+        var key = 0
         sidebarData.forEach(item => {
             tempsidebar.push(
-            <li key={key++}><a href={item.link}><span className="img-span"><img src={item.image} alt="" /></span>{item.text}</a></li>                
+                <li key={key++}>
+                    <Link to={item.link} >
+                        <a href={item.link}>
+                            <span className="img-span">
+                                <img src={item.image} alt="" />
+                            </span>{item.text}</a>
+                    </Link>
+                </li>
             )
         });
         return (

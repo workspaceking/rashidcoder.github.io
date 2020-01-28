@@ -19,9 +19,12 @@ class Header extends React.Component {
         const tempHeader = []
         var key = 0;
         headerMenu.forEach(item => {
-            tempHeader.push(<li key={key++}>
-                <a href={item.link}>{item.text}</a>
-            </li>)
+            tempHeader.push(
+
+                <li key={key++}>
+                    <Link  to={item.link} >{item.text}</Link>
+                </li>
+            )
         });
         const tempDropDownOption = []
         dropDownOptionArray.forEach(item => {

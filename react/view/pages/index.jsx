@@ -1,3 +1,10 @@
+// var Router = ReactRouter.Router;
+// var Route = ReactRouter.Route;
+// var IndexRoute = ReactRouter.IndexRoute;
+// var Link = ReactRouter.Link;
+// var browserHistory = ReactRouter.browserHistory;
+
+
 class Index extends React.Component {
     constructor(props) {
         super(props)
@@ -31,6 +38,10 @@ class Index extends React.Component {
                     {
                         link: "#",
                         text: "M'identifier / m'inscrire"
+                    },
+                    {
+                        link: "/login",
+                        text: "Login"
                     }
                 ],
                 dropDownOptionArray: [
