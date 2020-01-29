@@ -1,37 +1,6 @@
 <html lang="en">
 
-<head>
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!--====== Title ======-->
-    <title>React Template</title>
-
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="assets/css/all.min.css">
-
-    <!--====== Plugins css ======-->
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
-
-    <!--====== Main css ======-->
-    <link rel="stylesheet" href="assets/css/main.css">
-
-    <!--====== Responsive css ======-->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+<head id="head">
 
 </head>
 
@@ -40,19 +9,29 @@
 
     <!-- react | react dom & bable -->
 
-    <script crossorigin src="/assets/react/react.development.js"></script>
+    <script type="text/javascript" src="./config/config.js"></script>
+    
+    <script type="text/jsx" src="includes/reactscripts.jsx"></script>
+
+<!-- <div id="react">
+
+</div> -->
+
+<script type="text/jsx" src="includes/reactscripts.jsx"></script>
+
+     <script crossorigin src="/assets/react/react.development.js"></script>
     <script crossorigin src="/assets/react/react-dom.development.js"></script>
     <script crossorigin src="/assets/react/babel.min.js"></script>
 
-    <!-- router scripts -->
+ 
 
     <script crossorigin src="./assets/react/react-router-dom.min.js"></script>
     <script crossorigin src="./assets/react/react-router.min.js"></script>
 
     <!-- react | react dom & babel end -->
 
-
-
+    <script type="text/jsx" src="includes/stylesheets.jsx"></script>
+    <script type="text/jsx" src="includes/scripts.jsx"></script>
 
 
     <!-- LOGIN View scripts -->
@@ -67,11 +46,6 @@
     <!-- Main Components End -->
 
     <!-- LOGIN View scripts -->
-
-
-
-
-
 
 
 
@@ -101,9 +75,6 @@
 
 
 
-    <!-- Index view Script -->
-
-
     <!-- View scripts -->
     <script type="text/jsx" src="view/pages/index.jsx"></script>
 
@@ -121,7 +92,7 @@
     <!-- Main Components End -->
     <!-- View scripts End -->
 
-    </script>
+
 
     <script type="text/babel">
 
@@ -131,8 +102,10 @@
         const Prompt = ReactRouterDOM.Prompt;
         const Switch = ReactRouterDOM.Switch;
         const Redirect = ReactRouterDOM.Redirect;
-        
+
         ReactDOM.render(
+
+
             <Router>
                 <Route path="/index" component={Index} />
                 <Route path="/login" component={Login} />
@@ -145,25 +118,36 @@
             , document.getElementById("app"));
     </script>
 
-    <!-- jsx render end -->
 
-    <!-- templete scripts starts-->
-    <!--====== jquery js ======-->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react-slick/0.25.2/react-slick.min.js"></script> -->
-
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-
-    <!--====== Plugins js ======-->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/slick.min.js"></script> 
 
 
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
+    <!-- jsx render end -->
+  
+    
+    <footer id="footer">
+<!-- 
+        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+        <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    
+    
+    
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+    
+    
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    
+    
+    
+        <script src="assets/js/main.js"></script>
+     -->
+        </footer>
+
+       
 
 </body>
 
