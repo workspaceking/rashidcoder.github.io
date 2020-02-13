@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>React Template</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!--====== Plugins css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Main css ======-->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    
+    <!-- react | react dom & babel end  and react-route-dom-->
+
+    <script crossorigin src="/assets/react/react.development.js"></script>
+    <script crossorigin src="/assets/react/react-dom.development.js"></script>
+    <script crossorigin src="/assets/react/babel.min.js"></script>
+
+    <script crossorigin src="./assets/react/react-router-dom.min.js"></script>
+    <script crossorigin src="./assets/react/react-router.min.js"></script>
+
+    <!-- react | react dom & babel end -->
+
+
+
+
+
+
+    <!--Admin Pages view Scripts -->
+    
+    <!-- LOGIN View scripts -->
+    <script type="text/jsx" src="view/pages/login.jsx"></script>
+    <script type="text/jsx" src="view/pages/registration.jsx"></script>
+    <!-- LOGIN View scripts -->
+
+    
+    <script type="text/jsx" src="view/pages/mycatalog.jsx"></script>
+    <script type="text/jsx" src="view/pages/profile.jsx"></script>
+    <script type="text/jsx" src="view/pages/companyinfo.jsx"></script>
+    <script type="text/jsx" src="view/pages/addproduct.jsx"></script>
+    <script type="text/jsx" src="view/components/sidebar.jsx"></script>
+
+    <!--/Admin Pages view Scripts -->
+
+
+
+
+    <!-- flavor script -->
+    <script type="text/jsx" src="view/flavors/editdeletecard.jsx"></script>
+    <!-- flavor script End -->
+
+
+
+
+
+
+    <!-- Index scripts -->
+    <script type="text/jsx" src="view/pages/index.jsx"></script>
+    <!-- Index scripts -->
+
+
+
+
+
+
+    <!-- Main Components -->
+    <script type="text/jsx" src="view/components/header.jsx"></script>
+    <script type="text/jsx" src="view/components/hero.jsx"></script>
+    <script type="text/jsx" src="view/components/connect.jsx"></script>
+    <script type="text/jsx" src="view/flavors/card.jsx"></script>
+    <script type="text/jsx" src="view/components/testimonial.jsx"></script>
+    <script type="text/jsx" src="view/components/gallery.jsx"></script>
+    <script type="text/jsx" src="view/components/product.jsx"></script>
+    <script type="text/jsx" src="view/components/slider.jsx"></script>
+    <script type="text/jsx" src="view/components/footer.jsx"></script>
+    <script type="text/jsx" src="view/components/formdynamic.jsx"></script>
+    <!-- Main Components End -->
+
+
+    
+    <script type="text/babel">
+
+        const Router = ReactRouterDOM.BrowserRouter;
+        const Route = ReactRouterDOM.Route;
+        const Link = ReactRouterDOM.Link;
+        const Prompt = ReactRouterDOM.Prompt;
+        const Switch = ReactRouterDOM.Switch;
+        const Redirect = ReactRouterDOM.Redirect;
+
+        ReactDOM.render(
+
+
+            <Router>
+                <Route path="/index" component={Index} />
+                <Route path="/login" component={Login} />
+                <Route path="/registration" component={Registration} />
+                <Route path="/addproduct" component={AddProduct} />
+                <Route path="/mycatalog" component={MyCatalog} />
+                <Route path="/companyinfo" component={CompanyInfo} />
+                <Route path="/profile" component={Profile} />
+            </Router>
+            , document.getElementById("app"));
+    </script>
+
+
+
+    <!-- jsx render end -->
+
+    <!-- templete scripts starts-->
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+   
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Plugins js ======-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
